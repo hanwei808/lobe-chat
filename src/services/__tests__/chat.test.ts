@@ -649,7 +649,7 @@ describe('ChatService', () => {
             {
               function: {
                 arguments:
-                  '{"query":"LobeChat","searchEngines":["brave","google","duckduckgo","qwant"]}',
+                  '{"query":"WodeChat","searchEngines":["brave","google","duckduckgo","qwant"]}',
                 name: 'lobe-web-browsing____searchWithSearXNG____builtin',
               },
               id: 'call_6xCmrOtFOyBAcqpqO1TGfw2B',
@@ -658,7 +658,7 @@ describe('ChatService', () => {
             {
               function: {
                 arguments:
-                  '{"query":"LobeChat","searchEngines":["brave","google","duckduckgo","qwant"]}',
+                  '{"query":"WodeChat","searchEngines":["brave","google","duckduckgo","qwant"]}',
                 name: 'lobe-web-browsing____searchWithSearXNG____builtin',
               },
               id: 'tool_call_nXxXHW8Z',
@@ -707,7 +707,7 @@ describe('ChatService', () => {
             {
               function: {
                 arguments:
-                  '{"query":"LobeChat","searchEngines":["brave","google","duckduckgo","qwant"]}',
+                  '{"query":"WodeChat","searchEngines":["brave","google","duckduckgo","qwant"]}',
                 name: 'lobe-web-browsing____searchWithSearXNG____builtin',
               },
               id: 'call_6xCmrOtFOyBAcqpqO1TGfw2B',
@@ -716,7 +716,7 @@ describe('ChatService', () => {
             {
               function: {
                 arguments:
-                  '{"query":"LobeChat","searchEngines":["brave","google","duckduckgo","qwant"]}',
+                  '{"query":"WodeChat","searchEngines":["brave","google","duckduckgo","qwant"]}',
                 name: 'lobe-web-browsing____searchWithSearXNG____builtin',
               },
               id: 'tool_call_nXxXHW8Z',
