@@ -1,0 +1,38 @@
+name: Main CI
+
+# 执行时机
+on:
+  push:
+    tags:
+      - 'prod-*'
+      - 'st-*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: Determine environment file and tag
+        id: envfile
+        run: |
+          if [[ "${GITHUB_REF}" == refs/tags/prod-* ]]; then
+            echo "::set-output name=envfile::.env.prod"
+            echo "::set-output name=tag::${GITHUB_REF#refs/tags/}"
+          elif [[ "${GITHUB_REF}" == refs/tags/st-* ]]; then
+            echo "::set-output name=envfile::.env.st"
+            echo "::set-output name=tag::st"
+          fi
+
+      - name: Build the Docker image
+        run: |
+          echo "登录阿里云"
+          docker login --username=${{ secrets.ALIYUN_ACR_USERNAME }} registry.cn-shenzhen.aliyuncs.com --password=${{ secrets.ALIYUN_ACR_PASSWORD }}
+          echo "构建镜像"
+          docker build -t lobe-chat --build-arg ENV_FILE=${{ steps.envfile.outputs.envfile }} .
+          echo "打标签"
+          docker tag lobe-chat registry.cn-shenzhen.aliyuncs.com/hancenter/lobe-chat:${{ steps.envfile.outputs.tag }}
+          echo "推送镜像"
+          docker push registry.cn-shenzhen.aliyuncs.com/hancenter/lobe-chat:${{ steps.envfile.outputs.tag }}
+          echo "完成"
