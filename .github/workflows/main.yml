@@ -18,7 +18,7 @@ jobs:
         id: envfile
         run: |
           if [[ "${GITHUB_REF}" == refs/tags/prod-* ]]; then
-            echo "::set-output name=envfile::.env.prod"
+            echo "::set-output name=envfile::.env"
             echo "::set-output name=tag::${GITHUB_REF#refs/tags/}"
           elif [[ "${GITHUB_REF}" == refs/tags/st-* ]]; then
             echo "::set-output name=envfile::.env.st"
