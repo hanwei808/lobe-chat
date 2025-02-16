@@ -105,8 +105,8 @@ export const mapFeatureFlagsEnvToState = (config: IFeatureFlags) => {
     // showOpenAIProxyUrl: config.openai_proxy_url,
     showOpenAIProxyUrl: true,
 
-    // enablePlugins: config.plugins,
-    enablePlugins: false,
+    enablePlugins: config.plugins,
+    // enablePlugins: false,
     showDalle: config.dalle,
     // showChangelog: config.changelog,
     showChangelog: false,
@@ -127,8 +127,8 @@ export const mapFeatureFlagsEnvToState = (config: IFeatureFlags) => {
     // showCloudPromotion: config.cloud_promotion,
     showCloudPromotion: false,
 
-    // showMarket: config.market,
-    showMarket: false,
+    showMarket: config.market,
+    // showMarket: false,
     enableSTT: config.speech_to_text,
 
     // hideGitHub: config.commercial_hide_github,
