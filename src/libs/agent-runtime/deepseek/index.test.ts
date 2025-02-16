@@ -11,8 +11,8 @@ import {
 } from '@/libs/agent-runtime';
 
 import * as debugStreamModule from '../utils/debugStream';
-import { LobeDeepSeekAI } from './index';
 import { LobeOpenAICompatibleFactory } from '../utils/openaiCompatibleFactory';
+import { LobeDeepSeekAI } from './index';
 
 const provider = ModelProvider.DeepSeek;
 const defaultBaseURL = 'https://api.deepseek.com/v1';
@@ -32,7 +32,9 @@ const mockSuccessfulChatCompletion = () => {
     id: 'cmpl-mock',
     object: 'chat.completion',
     created: Date.now(),
-    choices: [{ index: 0, message: { role: 'assistant', content: 'Mock response' }, finish_reason: 'stop' }],
+    choices: [
+      { index: 0, message: { role: 'assistant', content: 'Mock response' }, finish_reason: 'stop' },
+    ],
   } as any);
 };
 
@@ -80,7 +82,7 @@ describe('LobeDeepSeekAI', () => {
         try {
           await instance.chat({
             messages: [{ content: 'Hello', role: 'user' }],
-            model: 'deepseek-chat',
+            model: 'deepseek-v3',
             temperature: 0,
           });
         } catch (e) {
@@ -120,7 +122,7 @@ describe('LobeDeepSeekAI', () => {
         try {
           await instance.chat({
             messages: [{ content: 'Hello', role: 'user' }],
-            model: 'deepseek-chat',
+            model: 'deepseek-v3',
             temperature: 0,
           });
         } catch (e) {
@@ -156,7 +158,7 @@ describe('LobeDeepSeekAI', () => {
         try {
           await instance.chat({
             messages: [{ content: 'Hello', role: 'user' }],
-            model: 'deepseek-chat',
+            model: 'deepseek-v3',
             temperature: 0,
           });
         } catch (e) {
@@ -181,7 +183,7 @@ describe('LobeDeepSeekAI', () => {
         try {
           await instance.chat({
             messages: [{ content: 'Hello', role: 'user' }],
-            model: 'deepseek-chat',
+            model: 'deepseek-v3',
             temperature: 0,
           });
         } catch (e) {
@@ -205,7 +207,7 @@ describe('LobeDeepSeekAI', () => {
         try {
           await instance.chat({
             messages: [{ content: 'Hello', role: 'user' }],
-            model: 'deepseek-chat',
+            model: 'deepseek-v3',
             temperature: 0,
           });
         } catch (e) {
@@ -253,7 +255,7 @@ describe('LobeDeepSeekAI', () => {
         // 假设的测试函数调用，你可能需要根据实际情况调整
         await instance.chat({
           messages: [{ content: 'Hello', role: 'user' }],
-          model: 'deepseek-chat',
+          model: 'deepseek-v3',
           stream: true,
           temperature: 0,
         });
@@ -266,7 +268,7 @@ describe('LobeDeepSeekAI', () => {
       });
     });
 
-    describe('deepseek-reasoner', () => {
+    describe('deepseek-r1', () => {
       beforeEach(() => {
         instance = createDeepSeekAIInstance();
         mockSuccessfulChatCompletion();
@@ -274,14 +276,11 @@ describe('LobeDeepSeekAI', () => {
 
       it('should insert a user message if the first message is from assistant', async () => {
         const payloadMessages = [{ content: 'Hello', role: 'assistant' as LLMRoleType }];
-        const expectedMessages = [
-          { content: '', role: 'user' },
-          ...payloadMessages,
-        ];
+        const expectedMessages = [{ content: '', role: 'user' }, ...payloadMessages];
 
         const payload: ChatStreamPayload = {
           messages: payloadMessages,
-          model: 'deepseek-reasoner',
+          model: 'deepseek-r1',
           temperature: 0,
         };
 
@@ -306,7 +305,7 @@ describe('LobeDeepSeekAI', () => {
 
         const payload: ChatStreamPayload = {
           messages: payloadMessages,
-          model: 'deepseek-reasoner',
+          model: 'deepseek-r1',
           temperature: 0,
         };
 
@@ -336,7 +335,7 @@ describe('LobeDeepSeekAI', () => {
 
         const payload: ChatStreamPayload = {
           messages: payloadMessages,
-          model: 'deepseek-reasoner',
+          model: 'deepseek-r1',
           temperature: 0,
         };
 
@@ -374,7 +373,7 @@ describe('LobeDeepSeekAI', () => {
 
         const payload: ChatStreamPayload = {
           messages: payloadMessages,
-          model: 'deepseek-reasoner',
+          model: 'deepseek-r1',
           temperature: 0,
         };
 

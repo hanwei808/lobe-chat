@@ -86,35 +86,54 @@ export const DEFAULT_FEATURE_FLAGS: IFeatureFlags = {
 
 export const mapFeatureFlagsEnvToState = (config: IFeatureFlags) => {
   return {
-    enableWebrtc: config.webrtc_sync,
-    isAgentEditable: config.edit_agent,
+    // enableWebrtc: config.webrtc_sync,
+    enableWebrtc: false,
+    // isAgentEditable: config.edit_agent,
+    isAgentEditable: false,
 
-    showCreateSession: config.create_session,
-    showLLM: config.language_model_settings,
-    showProvider: config.provider_settings,
-    showPinList: config.pin_list,
+    // showCreateSession: config.create_session,
+    showCreateSession: false,
+    // showLLM: config.language_model_settings,
+    showLLM: false,
+    // showProvider: config.provider_settings,
+    showProvider: false,
+    // showPinList: config.pin_list,
+    showPinList: true,
 
-    showOpenAIApiKey: config.openai_api_key,
-    showOpenAIProxyUrl: config.openai_proxy_url,
+    // showOpenAIApiKey: config.openai_api_key,
+    showOpenAIApiKey: true,
+    // showOpenAIProxyUrl: config.openai_proxy_url,
+    showOpenAIProxyUrl: true,
 
-    enablePlugins: config.plugins,
+    // enablePlugins: config.plugins,
+    enablePlugins: false,
     showDalle: config.dalle,
-    showChangelog: config.changelog,
+    // showChangelog: config.changelog,
+    showChangelog: false,
 
-    enableCheckUpdates: config.check_updates,
-    showWelcomeSuggest: config.welcome_suggest,
+    // enableCheckUpdates: config.check_updates,
+    enableCheckUpdates: false,
+    // showWelcomeSuggest: config.welcome_suggest,
+    showWelcomeSuggest: true,
 
-    enableClerkSignUp: config.clerk_sign_up,
+    // enableClerkSignUp: config.clerk_sign_up,
+    enableClerkSignUp: false,
 
-    enableKnowledgeBase: config.knowledge_base,
-    enableRAGEval: config.rag_eval,
+    // enableKnowledgeBase: config.knowledge_base,
+    enableKnowledgeBase: false,
+    // enableRAGEval: config.rag_eval,
+    enableRAGEval: false,
 
-    showCloudPromotion: config.cloud_promotion,
+    // showCloudPromotion: config.cloud_promotion,
+    showCloudPromotion: false,
 
-    showMarket: config.market,
+    // showMarket: config.market,
+    showMarket: false,
     enableSTT: config.speech_to_text,
 
-    hideGitHub: config.commercial_hide_github,
-    hideDocs: config.commercial_hide_docs,
+    // hideGitHub: config.commercial_hide_github,
+    hideGitHub: true,
+    // hideDocs: config.commercial_hide_docs,
+    hideDocs: true,
   };
 };

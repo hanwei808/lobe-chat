@@ -115,7 +115,7 @@ describe('Metadata', () => {
         locale: 'es-ES',
         type: 'article',
         url: 'https://example.com/og',
-        siteName: 'LobeChat',
+        siteName: '问达科技',
         alternateLocale: expect.arrayContaining([
           'ar',
           'bg-BG',

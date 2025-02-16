@@ -35,7 +35,7 @@ describe('featureFlagsSelectors', () => {
       showWelcomeSuggest: true,
       enableClerkSignUp: true,
       showProvider: true,
-      showMarket: true,
+      showMarket: false,
       showPinList: false,
       enableSTT: true,
     });

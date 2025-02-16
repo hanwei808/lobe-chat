@@ -4,7 +4,6 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import { ProductLogo } from '@/components/Branding';
 import PluginTag from '@/features/PluginTag';
 import { useAgentStore } from '@/store/agent';
 import { agentSelectors } from '@/store/agent/selectors';
@@ -65,7 +64,7 @@ const Preview = memo<FieldType & { title?: string }>(
             <ChatList />
             {withFooter ? (
               <Flexbox align={'center'} className={styles.footer} gap={4}>
-                <ProductLogo type={'combine'} />
+                {/* <ProductLogo type={'combine'} /> */}
                 <div className={styles.url}>{pkg.homepage}</div>
               </Flexbox>
             ) : (

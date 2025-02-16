@@ -1249,7 +1249,7 @@
     "per_request_limits": null
   },
   {
-    "id": "deepseek/deepseek-chat",
+    "id": "deepseek/deepseek-v3",
     "name": "DeepSeek-V2 Chat",
     "created": 1715644800,
     "description": "DeepSeek-V2 Chat is a conversational finetune of DeepSeek-V2, a Mixture-of-Experts (MoE) language model. It comprises 236B total parameters, of which 21B are activated for each token.\n\nCompared with DeepSeek 67B, DeepSeek-V2 achieves stronger performance, and meanwhile saves 42.5% of training costs, reduces the KV cache by 93.3%, and boosts the maximum generation throughput to 5.76 times.\n\nDeepSeek-V2 achieves remarkable performance on both standard benchmarks and open-ended generation evaluations.",

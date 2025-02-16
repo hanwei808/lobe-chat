@@ -997,7 +997,7 @@ DeepSeek-V2 achieves remarkable performance on both standard benchmarks and open
     "displayName": "DeepSeek-V2 Chat",
     "enabled": true,
     "functionCall": true,
-    "id": "deepseek/deepseek-chat",
+    "id": "deepseek/deepseek-v3",
     "maxTokens": 4096,
     "reasoning": false,
     "vision": false,

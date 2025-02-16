@@ -43,8 +43,9 @@ export class ChangelogService {
   };
 
   async getLatestChangelogId() {
-    const index = await this.getChangelogIndex();
-    return index[0]?.id;
+    // const index = await this.getChangelogIndex();
+    // return index[0]?.id;
+    return undefined;
   }
 
   async getChangelogIndex(): Promise<ChangelogIndexItem[]> {

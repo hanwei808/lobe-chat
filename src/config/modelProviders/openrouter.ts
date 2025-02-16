@@ -208,7 +208,7 @@ const OpenRouter: ModelProviderCard = {
       displayName: 'DeepSeek V2.5',
       enabled: true,
       functionCall: true,
-      id: 'deepseek/deepseek-chat',
+      id: 'deepseek/deepseek-v3',
       pricing: {
         input: 0.14,
         output: 0.28,

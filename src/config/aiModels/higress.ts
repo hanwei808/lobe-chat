@@ -2131,7 +2131,7 @@ const higressChatModels: AIChatModelCard[] = [
       '融合通用与代码能力的全新开源模型, 不仅保留了原有 Chat 模型的通用对话能力和 Coder 模型的强大代码处理能力，还更好地对齐了人类偏好。此外，DeepSeek-V2.5 在写作任务、指令跟随等多个方面也实现了大幅提升。',
     displayName: 'DeepSeek V2.5',
     enabled: true,
-    id: 'deepseek-chat',
+    id: 'deepseek-v3',
     pricing: {
       cachedInput: 0.014,
       input: 0.14,

@@ -1856,7 +1856,7 @@ const Higress: ModelProviderCard = {
       displayName: 'DeepSeek V2.5',
       enabled: true,
       functionCall: true,
-      id: 'deepseek-chat',
+      id: 'deepseek-v3',
       pricing: {
         cachedInput: 0.014,
         input: 0.14,
