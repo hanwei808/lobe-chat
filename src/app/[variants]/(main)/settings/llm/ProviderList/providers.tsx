@@ -56,13 +56,14 @@ export const useProviderList = (): ProviderItem[] => {
   return useMemo(
     () => [
       OpenAIProvider,
+      DeepSeekProviderCard,
+      QwenProviderCard,
       AzureProvider,
       OllamaProvider,
       VLLMProviderCard,
       AnthropicProviderCard,
       BedrockProvider,
       GoogleProviderCard,
-      DeepSeekProviderCard,
       HuggingFaceProvider,
       OpenRouterProviderCard,
       CloudflareProvider,
@@ -77,7 +78,6 @@ export const useProviderList = (): ProviderItem[] => {
       Ai21ProviderCard,
       UpstageProviderCard,
       XAIProviderCard,
-      QwenProviderCard,
       WenxinProviderCard,
       HunyuanProviderCard,
       SparkProviderCard,
