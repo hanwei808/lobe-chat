@@ -91,30 +91,22 @@ export const mapFeatureFlagsEnvToState = (config: IFeatureFlags) => {
     // isAgentEditable: config.edit_agent,
     isAgentEditable: false,
 
-    // showCreateSession: config.create_session,
-    showCreateSession: false,
-    // showLLM: config.language_model_settings,
-    showLLM: false,
-    // showProvider: config.provider_settings,
-    showProvider: false,
-    // showPinList: config.pin_list,
-    showPinList: true,
+    showCreateSession: config.create_session,
+    showLLM: config.language_model_settings,
+    showProvider: config.provider_settings,
+    showPinList: config.pin_list,
 
-    // showOpenAIApiKey: config.openai_api_key,
-    showOpenAIApiKey: true,
-    // showOpenAIProxyUrl: config.openai_proxy_url,
-    showOpenAIProxyUrl: true,
+    showOpenAIApiKey: config.openai_api_key,
+    showOpenAIProxyUrl: config.openai_proxy_url,
 
     enablePlugins: config.plugins,
-    // enablePlugins: false,
     showDalle: config.dalle,
     // showChangelog: config.changelog,
     showChangelog: false,
 
     // enableCheckUpdates: config.check_updates,
     enableCheckUpdates: false,
-    // showWelcomeSuggest: config.welcome_suggest,
-    showWelcomeSuggest: true,
+    showWelcomeSuggest: config.welcome_suggest,
 
     // enableClerkSignUp: config.clerk_sign_up,
     enableClerkSignUp: false,
@@ -128,7 +120,6 @@ export const mapFeatureFlagsEnvToState = (config: IFeatureFlags) => {
     showCloudPromotion: false,
 
     showMarket: config.market,
-    // showMarket: false,
     enableSTT: config.speech_to_text,
 
     // hideGitHub: config.commercial_hide_github,
