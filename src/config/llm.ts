@@ -197,7 +197,7 @@ export const getLLMConfig = () => {
       ENABLED_WENXIN: !!process.env.WENXIN_API_KEY,
       WENXIN_API_KEY: process.env.WENXIN_API_KEY,
 
-      ENABLED_OLLAMA: process.env.ENABLED_OLLAMA !== '0',
+      ENABLED_OLLAMA: !!process.env.ENABLED_OLLAMA,
 
       ENABLED_VLLM: !!process.env.VLLM_API_KEY,
       VLLM_API_KEY: process.env.VLLM_API_KEY,
