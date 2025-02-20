@@ -103,7 +103,7 @@
       "edit": "Benutzerdefiniertes Plugin bearbeiten"
     },
     "type": {
-      "lobe": "LobeChat-Plugin",
+      "lobe": "WodeChat-Plugin",
       "openai": "OpenAI-Plugin"
     },
     "update": "Aktualisieren",
