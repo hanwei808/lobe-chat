@@ -3,19 +3,19 @@ import { ModelProviderCard } from '@/types/llm';
 // ref: https://help.aliyun.com/zh/model-studio/getting-started/models
 const Qwen: ModelProviderCard = {
   chatModels: [
-    {
-      contextWindowTokens: 1_000_000,
-      description: '通义千问超大规模语言模型，支持中文、英文等不同语言输入。',
-      displayName: 'Qwen Turbo',
-      enabled: true,
-      functionCall: true,
-      id: 'qwen-turbo-latest',
-      pricing: {
-        currency: 'CNY',
-        input: 0.3,
-        output: 0.6,
-      },
-    },
+    // {
+    //   contextWindowTokens: 1_000_000,
+    //   description: '通义千问超大规模语言模型，支持中文、英文等不同语言输入。',
+    //   displayName: 'Qwen Turbo',
+    //   enabled: true,
+    //   functionCall: true,
+    //   id: 'qwen-turbo-latest',
+    //   pricing: {
+    //     currency: 'CNY',
+    //     input: 0.3,
+    //     output: 0.6,
+    //   },
+    // },
     {
       contextWindowTokens: 131_072,
       description: '通义千问超大规模语言模型增强版，支持中文、英文等不同语言输入。',
@@ -153,7 +153,8 @@ const Qwen: ModelProviderCard = {
     },
     {
       contextWindowTokens: 32_768,
-      description: 'QVQ模型是由 Qwen 团队开发的实验性研究模型，专注于提升视觉推理能力，尤其在数学推理领域。',
+      description:
+        'QVQ模型是由 Qwen 团队开发的实验性研究模型，专注于提升视觉推理能力，尤其在数学推理领域。',
       displayName: 'QVQ 72B Preview',
       id: 'qvq-72b-preview',
       pricing: {
