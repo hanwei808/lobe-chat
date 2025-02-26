@@ -6,7 +6,7 @@ const XAI: ModelProviderCard = {
     {
       contextWindowTokens: 131_072,
       description: '拥有与 Grok 3 相当的性能，但具有更高的效率、速度和功能。',
-      displayName: 'Grok 3',
+      displayName: 'Grok 3 全球数据',
       enabled: true,
       functionCall: true,
       id: 'grok-3',

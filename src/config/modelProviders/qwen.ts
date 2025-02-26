@@ -16,19 +16,19 @@ const Qwen: ModelProviderCard = {
     //     output: 0.6,
     //   },
     // },
-    {
-      contextWindowTokens: 131_072,
-      description: '通义千问超大规模语言模型增强版，支持中文、英文等不同语言输入。',
-      displayName: 'Qwen Plus',
-      enabled: true,
-      functionCall: true,
-      id: 'qwen-plus-latest',
-      pricing: {
-        currency: 'CNY',
-        input: 0.8,
-        output: 2,
-      },
-    },
+    // {
+    //   contextWindowTokens: 131_072,
+    //   description: '通义千问超大规模语言模型增强版，支持中文、英文等不同语言输入。',
+    //   displayName: 'Qwen Plus',
+    //   enabled: true,
+    //   functionCall: true,
+    //   id: 'qwen-plus-latest',
+    //   pricing: {
+    //     currency: 'CNY',
+    //     input: 0.8,
+    //     output: 2,
+    //   },
+    // },
     {
       contextWindowTokens: 32_768,
       description:
@@ -55,20 +55,20 @@ const Qwen: ModelProviderCard = {
         output: 2,
       },
     },
-    {
-      contextWindowTokens: 32_000,
-      description:
-        '通义千问大规模视觉语言模型增强版。大幅提升细节识别能力和文字识别能力，支持超百万像素分辨率和任意长宽比规格的图像。',
-      displayName: 'Qwen VL Plus',
-      enabled: true,
-      id: 'qwen-vl-plus-latest',
-      pricing: {
-        currency: 'CNY',
-        input: 1.5,
-        output: 4.5,
-      },
-      vision: true,
-    },
+    // {
+    //   contextWindowTokens: 32_000,
+    //   description:
+    //     '通义千问大规模视觉语言模型增强版。大幅提升细节识别能力和文字识别能力，支持超百万像素分辨率和任意长宽比规格的图像。',
+    //   displayName: 'Qwen VL Plus',
+    //   enabled: true,
+    //   id: 'qwen-vl-plus-latest',
+    //   pricing: {
+    //     currency: 'CNY',
+    //     input: 1.5,
+    //     output: 4.5,
+    //   },
+    //   vision: true,
+    // },
     {
       contextWindowTokens: 32_768,
       description:
