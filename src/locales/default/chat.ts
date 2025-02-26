@@ -44,8 +44,8 @@ export default {
   historyRange: '历史范围',
   historySummary: '历史消息总结',
   inbox: {
-    desc: '开启大脑集群，激发思维火花。你的智能助理，在这里与你交流一切',
-    title: '随便聊聊',
+    desc: '我的智能助理，在这里交流一切。',
+    title: '需要帮助吗？',
   },
   input: {
     addAi: '添加一条 AI 消息',
